@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warmings= FALSE, messages = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
@@ -23,15 +23,15 @@ ces <- read_csv(here("data", "ces3demographics.csv" )) %>%
 ```
 
 ```{r}
-
 ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score)) +
-  geom_hex() +
+  geom_hex() + #create HEX plot
   labs(x = "Percent of white population", 
        y = "CalEnviroScreen 3.0 Score", 
        title = "Relationship between CalEnviroScreen 3.0 score and percentage (%) of white population ") +
-  theme_minimal()+
-  scale_fill_gradient(low = "darkblue", high = "red")
+  theme_minimal() + # update theme
+  scale_fill_gradient(low = "darkblue", high = "red") # change colors to red and blue
 ```
 
 
 **Figure 1**: Heat map shows the relationship between white communities (x-axis) in percentage (%) and the CalEnviroScreen 3.0 Score (y-axis). The CalEnviroScreen 3.0 score is a function of pollution burden and population characteristics. The color gradient indicates density of data points (CEJA Green Zones)"
+
