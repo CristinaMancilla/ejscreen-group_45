@@ -2,4 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+<<<<<<< HEAD
 .html
+=======
+*.html
+>>>>>>> 95f9bd3c15e09928e7246985d8423fee2754188c
