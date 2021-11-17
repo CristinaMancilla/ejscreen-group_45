@@ -23,9 +23,11 @@ ces <- read_csv(here("data", "ces3demographics.csv" )) %>%
 ```
 
 ```{r}
+#Create a plot that uses point density to depict the relationship between percentage of white populaiton and CalEnviroScreen 3.0 
+
 ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score)) +
   geom_hex() + #create HEX plot
-  labs(x = "Percent of white population", 
+  labs(x = "Percentage (%) of white population", 
        y = "CalEnviroScreen 3.0 Score", 
        title = "Relationship between CalEnviroScreen 3.0 score and percentage (%) of white population ") +
   theme_minimal() + # update theme
@@ -36,6 +38,10 @@ ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score)) +
 **Figure 1**: Heat map shows the relationship between white communities (x-axis) in percentage (%) and the CalEnviroScreen 3.0 Score (y-axis). The CalEnviroScreen 3.0 score is a function of pollution burden and population characteristics. The color gradient indicates density of data points (CEJA Green Zones)"
 
 There is a negative relationship between percent of white population and the CalEnviroScreen 3.0 score. As the percent of white population increases the CalEnviroScreen 3.0 score decreases as indicated by the color gradient. 
+
+
+
+
 
 **Data Citation**: 
 United States Census Bureau. 2010 Census.U.S. Census Bureau. 2010.
